@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	    <title> KickTractor </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="item.css">
+        
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    </head>
+    <body>
+        <div class="header">
+            
+            <div class="image" id="header_image">
+                <div class="logo" id="main_logo">
+                    <img id="main_logo_outer" src="./Images/Icons/logo_outer.png"></img>
+                    <img id="main_logo_inner" src="./Images/Icons/logo_inner.png"></img>
+                </div>
+                <span id="header_text">KICKTRACTOR</span>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="content">
+                <div class="item_photo"></div>
+                <div class="bid">
+                    <span class="title">Μαστίχα Χίου</span>
+                    <span class="current_amount">20,000€</span>
+                    <div class="goal_amount">
+                        <span id="text">Αρχικός Στόχος: </span>
+                        <span id="amount">15,000€</span>
+                    </div>
+
+                    <div id="bid_details">
+                        <div id="subscribers">
+                            <span class="number_of_subscribers" id="amount">628</span>
+                            <span id="text"> συνδρομητές</span>
+                        </div>
+                        <div id="time_to_deadline">
+                            <span id="amount">73</span>
+                            <span id="text"> μέρες απομένουν</span>
+                        </div>
+                    </div>
+
+
+                    
+                    <div id="actions">
+                        <div id="payment">
+                            <button id="pay" onclick="contribute()">Θέλω να συμμετέχω</button>
+                            <button id="save" onclick="save_item()"></button>
+                        </div>
+
+                        
+                        <div class="other_actions">
+                            <div class="share">
+                                <span id="share_text">Share with: </span>
+                                <div class="share_apps">
+                                    <div id="facebook_app"></div>
+                                    <div id="instagram_app"></div>
+                                    <div id="twitter_app"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="producer">
+                <div id="basic_info">
+                    <span id="name">Όνομα Επώνυμο</span>
+                    <span id="address">Καρφάς, Χίος, 82100</span>
+                    <div id="categories">
+                        <span id="item1">Μαστίχα</span>
+                        <span id="item2">Πορτοκάλια</span>
+                        <span id="item3">Ελιές</span>
+                        <span id="item4">Πατάτες</span>
+                    </div>
+                </div>
+                <div id="description">
+                    <span></span>
+                </div>
+                <img id="pic" src="./Images/People/farmer.png" onclick="window.location='./new_crop.html'""></img>
+                <div id="meta">
+                    <div id="rating">
+                        <span>Βαθμολογία: </h4>
+                        <div class="meta_icon" id="rating_icon"></div>
+                    </div>
+                    <div id="popularity">
+                        <span>Δημοτικότητα: </span>
+                        <div class="meta_icon" id="popularity_icon"></div>
+                    </div>
+                    <div id="credibility">
+                        <span>Αξιοπιστία: </span>
+                        <div class="meta_icon" id="credibility_icon"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="updates">
+                <div id="update1">
+                    <p id="update_header">Ο στόχος εκπληρώθηκε!</p>
+                    <p id="update_date">3/04/2019</p>
+                    <p id="update_description">Oι συνδρομητές μπορούν να ξεκινήσουν να οργανώνουν τις παραγγελίες τους.</p>
+                </div>
+                <div id="update2">
+                    <p id="update_header">Πολύ έντονη δραστηριότητα...</p>
+                    <p id="update_date">26/03/2019</p>
+                    <p id="update_description">Το σχέδιο παρουσιάζει έντονη δραστηριότητα και ο στόχος προβλεπεται να εκπληρωθεί.</p>
+                </div>
+                <div id="update3">
+                    <p id="update_header">Το σχέδιο μόλις προστέθηκε!</p>
+                    <p id="update_date">20/03/2019</p>
+                    <p id="update_description">Βοηθήστε μας να πιάσουμε το στόχο των 15,000€ για να ξεκινήσει η παραγωγή. </p>
+                    <p id="update_description">Μόλις διασφαλιστεί ο στόχος, όλοι οι συνδρομητές θα ενημερωθούν και θα μπορούν να ξεκινήσουν να οργανώνουν τις παραγγελίες τους.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="info">
+                <span id="about_us">Σχετικά με εμάς</span>
+                <span id="how_we_work">Πώς Λειτουργούμε</span>
+                <span id="contact">Μιλήστε μας</span>
+            </div>
+            <div class="social">
+                <div id="facebook"></div>
+                <div id="instagram"></div>
+                <div id="twitter"></div>
+            </div>
+        </div>
+
+
+
+        <script>
+            /*
+            <div id="subscribers">
+                <span class="number_of_subscribers" id="amount">628</span>
+                <span id="text"> συνδρομητές</span>
+            </div>
+            <div id="time_to_deadline">
+                <span id="amount">73</span>
+                <span id="text"> μέρες απομένουν</span>
+            </div>
+
+            <div class="payment_step1">
+                <input type="text" id="amount_input" placeholder="50€"></div>
+                <button id="payment_step1_button">Πληρωμή</button>
+                <p id="payment_with_nbg_api">* Η πληρωμή γίνεται μέσω του API της Εθνικής Τράπεζας. </p>
+            </div>
+            */
+            document.getElementById("save").style.backgroundColor = "white";
+            amount_collected = document.getElementsByClassName("current_amount")[0].innerHTML;
+            subscribers = document.getElementsByClassName("number_of_subscribers")[0].innerHTML;
+            
+
+            function restrore(amount) {
+                alert("HI");
+                document.getElementsByClassName("number_of_subscribers")[0].innerHTML += 1;
+
+                document.getElementById("plan_details").remove();
+                document.getElementById("amount_input").remove();
+                document.getElementById("payment_button").remove();
+
+                subscribers_div = document.createElement("div");
+                subscribers_div.id = "subscribers";
+
+                subscribers_amount_span = document.createElement("span");
+
+                subscribers_amount_span.className = "number_of_subscribers";
+                subscribers_amount_span.id = "amount";
+                subscribers_amount_span.innerHTML = subscribers + 1;
+
+                subscribers_text_span = document.createElement("span");
+                subscribers_text_span.id = "text";
+                subscribers_text_span.innerHTML = " συνδρομητές";
+
+                subscribers_div.appendChild(subscribers_amount_span);
+                subscribers_div.appendChild(subscribers_text_span);
+
+
+                time_to_deadline_div = document.createElement("div");
+                time_to_deadline_div.id = "time_to_deadline";
+
+                time_to_deadline_text_span = document.createElement("span");
+                time_to_deadline_amount_span.id = "amount";
+                time_to_deadline_amount_span.innerHTML = 73;
+
+                time_to_deadline_text_span = document.createElement("span");
+                time_to_deadline_text_span.id = "text";
+                time_to_deadline_text_span.innerHTML = " μέρες απομένουν";
+
+                time_to_deadline_div.appendChild(time_to_deadline_amount_span);
+                time_to_deadline_div.appendChild(time_to_deadline_text_span);
+
+
+                document.getElementById("bid_details").appendChild(subscribers_div);
+                document.getElementById("bid_details").appendChild(time_to_deadline_div);
+            }
+
+            function contribute() {
+                document.getElementById("subscribers").remove();
+                document.getElementById("time_to_deadline").remove();
+
+                plan_details_div = document.createElement("div");
+                plan_details_div.id = "plan_details";
+               
+                p1 = document.createElement("p");
+                p1.innerHTML = "≤ 100€: Χωρίς Ασφάλεια";
+
+                p2 = document.createElement("p");
+                p2.innerHTML = "≤ 500€: Ασφάλεια 20%";
+
+                p3 = document.createElement("p");
+                p3.innerHTML = "≤ 1000€: Ασφάλεια 35%";
+
+                p4 = document.createElement("p");
+                p4.innerHTML = "> από 1000€: Ασφάλεια 50%";
+
+                p5 = document.createElement("p");
+                p5.innerHTML = "* Η πληρωμή γίνεται μέσω του API της Εθνικής Τράπεζας. ";
+                
+                plan_details_div.appendChild(p1);
+                plan_details_div.appendChild(p2);
+                plan_details_div.appendChild(p3);
+                plan_details_div.appendChild(p4);
+                plan_details_div.appendChild(p5);
+
+                document.getElementById("pay").remove();
+                document.getElementById("save").remove();
+
+                amount_input = document.createElement("input");
+                amount_input.id = "amount_input";
+                amount_input.type = "text";
+                amount_input.placeholder = "50€";
+
+                payment_button = document.createElement("input");
+                payment_button.id = "payment_button";
+                payment_button.type = "button";
+                payment_button.value = "Πληρωμή";
+                payment_button.onclick = function() {
+                    if (Number.isInteger(+amount_input.value) && +amount_input.value > 0){
+                        payment_button.value = "Ευχαριστούμε!";
+                        alert("Η συνδρομή σας κατοχυρώθηκε και θα επικοινωνήσουμε μαζί σας για περισσότερες πληροφορίες");
+                    }
+                };
+
+                document.getElementById("bid_details").appendChild(plan_details_div);
+                
+                document.getElementById("payment").appendChild(amount_input);
+                document.getElementById("payment").appendChild(payment_button);
+            }
+
+            function save_item() {                
+                if (document.getElementById("save").style.backgroundColor == "white") {
+                    document.getElementById("save").style.backgroundColor = "rgb(0, 77, 38)";
+                } else if (document.getElementById("save").style.backgroundColor == "rgb(0, 77, 38)") {
+                    document.getElementById("save").style.backgroundColor = "white";
+                }
+            }
+        </script>
+    </body>
+</html>

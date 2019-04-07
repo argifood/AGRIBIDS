@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title> QRTractor </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="qr.css">
+        
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    </head>
+    <body>
+        <div class="header">
+            
+            <div class="image" id="header_image">
+                <div class="logo" id="main_logo">
+                    <img id="main_logo_outer" src="./Images/Icons/logo_outer.png"></img>
+                    <img id="main_logo_inner" src="./Images/Icons/logo_inner.png"></img>
+                </div>
+                <span id="header_text">QRTRACTOR</span>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="content">
+                <p id="click_me">Click me to<br>mimic QR Scan...</p>
+                <button class="qr_image" onclick="receipt()"></button>
+                <div class="code_info" id="code_info">
+                    <p class="info_title" id="title">Νέα Παραλαβή</p>
+                    
+                    <p class="info_header" id="amount">Αποστολέας</p>
+                    <p>
+                        <a class="info" href="./index.html" id="producer">Όνομα Επώνυμο</a>
+                    </p>
+                    
+                    <p class="info_header" id="amount">Ποσότητα</p>
+                    <p class="info" id="amount">1kg Μαστίχα</p>
+                    
+                    <p class="info_header" id="amount">Ημερομηνία</p>
+                    <p class="info" id="date">15/04/2019</p>
+
+                    <div id="buttons">
+                        <button id="accept">Αποδοχή</button> 
+                        <button id="decline">Απόρριψη</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="info">
+                <span id="about_us">Σχετικά με εμάς</span>
+                <span id="how_we_work">Πώς Λειτουργούμε</span>
+                <span id="contact">Μιλήστε μας</span>
+            </div>
+            <div class="social">
+                <div id="facebook"></div>
+                <div id="instagram"></div>
+                <div id="twitter"></div>
+            </div>
+        </div>
+
+
+
+        <script>
+            function receipt() {
+                document.getElementById("click_me").style.opacity = 0;
+                document.getElementById("code_info").style.opacity = 1;
+            }
+        </script>
+    </body>
+</html>

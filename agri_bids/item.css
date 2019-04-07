@@ -1,0 +1,606 @@
+html, body {
+    background-color: transparent;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.logo {
+	height: 10vw;
+	width: 10vw;
+}
+
+#main_logo {
+	position: absolute;
+	left: 47.5vw;
+	top: 10vw;
+	background-size: cover;
+}
+
+#main_logo_outer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 8.5vw;
+	width: 8.5vw;
+
+	transition: transform 0.2s linear;
+	-webkit-transition: transform 0.2s linear;
+}
+
+#main_logo:hover #main_logo_outer {
+	transform: rotate(180deg);
+}
+
+#main_logo_inner {
+	position: absolute;
+	top: 1.8vw;
+	left: 2.2vw;
+	height: 5vw;
+	width: 4.3vw;
+	background-size: contain;
+}
+
+.image {
+	text-align: center;
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./Images/Backgrounds/3.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.image span {
+	position: relative;
+	top: 20vw;
+	font-size: 7vw;
+	color: #00994d;
+}
+
+.block {
+	position: absolute;
+	width: 100vw;
+	background-color: white;
+	height: 100vw;
+	left: 0px;
+	top: 39vw;
+}
+
+.content {
+	position: absolute;
+	top: 0px;
+	width: 90vw;
+	left: 5vw;
+}
+
+.item_photo {
+	position: absolute;
+	left: 0px;
+	top: 5vw;
+	background-image: url("./Images/Food/Vegetables/mastiha.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 40vw;
+	width: 55vw;
+}
+
+.bid {
+	position: absolute;
+	top: 5vw;
+	height: 40vw;
+	width: 33vw;
+	right: 0px;
+	border-left: 0.1vw solid #00994d;
+}
+
+.title {
+	position: absolute;
+	top: 0px;
+	left: 2vw;
+	font-size: 2.5vw;
+	color: #004d26;
+}
+
+.current_amount {
+	position: absolute;
+	left: 2vw;
+	top: 7vw;
+	font-size: 3.5vw;
+	color: #004d26;
+}
+
+.goal_amount {
+	position: absolute;
+	top: 11.5vw;
+	left: 2vw;
+	color: #00994d;
+}
+
+.goal_amount #text {
+	font-size: 1.2vw;
+}
+
+.goal_amount #amount {
+	font-size: 1.3vw;
+}
+
+#bid_details {
+	position: absolute;
+	right: 0px;
+	height: 20vw;
+	width: 33vw;
+}
+
+#plan_details {
+	position: absolute;
+	top: 17vw;
+	left: 2vw;
+	height: 20vw;
+	width: 33vw;
+	color: #004d26;
+	font-size: 1.1vw;
+}
+
+#subscribers {
+	position: absolute;
+	top: 20vw;
+	left: 2vw;
+	color: #004d26;
+}
+
+#subscribers #text {
+	font-size: 1.2vw;
+}
+
+#subscribers #amount {
+	font-size: 2.5vw;
+}
+
+#time_to_deadline {
+	position: absolute;
+	top: 24vw;
+	left: 2vw;
+	color: #004d26;
+}
+
+#time_to_deadline #text {
+	font-size: 1.2vw;
+}
+
+#time_to_deadline #amount {
+	font-size: 2.5vw;
+}
+
+#actions {
+	position: absolute;
+	top: 31vw;
+	right: 2vw;
+}
+
+#payment {
+	position: absolute;
+	height: 4vw;
+	width: 29vw;
+	top: 0px;
+	right: 0px;
+}
+
+button {
+	border: none;
+}
+
+#pay {
+	position: absolute;
+	left: : 0px;
+	width: 85%;
+	height: 100%;
+	background-color: #00994d;
+	font-size: 1.5vw;
+	color: white;
+
+	transition: font-size 0.1s linear;
+	-webkit-transition: font-size 0.1s linear;
+
+	transition: background-color 0.1s linear;
+	-webkit-transition: background-color 0.1s linear;
+}
+
+#pay:hover {
+	font-size: 1.6vw;
+	background-color: #004d26;
+}
+
+#save {
+	position: absolute;
+	right: 0px;
+	height: 100%;
+	width: 4vw;
+	background-color: white;
+	background-image: url("./Images/Icons/heart.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	transition: background-color 0.1s linear;
+	-webkit-transition: background-color 0.1s linear;
+}
+
+#save:hover {
+	background-color: #004d26;
+}
+
+#amount_input {
+	position: absolute;
+	right: 0px;
+	height: 4vw;
+	width: 12vw;
+	border: none;
+	border-bottom: 1px solid #004d26;
+	font-size: 1.5vw;
+	color: #004d26;
+	text-align: center;
+}
+
+#payment_button {
+	position: absolute;
+	left: : 19vw;
+	width: 15vw;
+	height: 4vw;
+	border: none;
+	background-color: #00994d;
+	font-size: 1.5vw;
+	color: white;
+
+	transition: font-size 0.1s linear;
+	-webkit-transition: font-size 0.1s linear;
+
+	transition: background-color 0.1s linear;
+	-webkit-transition: background-color 0.1s linear;
+}
+
+#payment_button:hover {
+	font-size: 1.6vw;
+	background-color: #004d26;
+}
+
+.other_actions {
+	position: absolute;
+	top: 5vw;
+	right: 0px;
+	height: 4vw;
+	width: 29vw;
+}
+
+#share_text {
+	position: absolute;
+	left: 0.5vw;
+	top: 50%;
+	font-size: 1.1vw;
+	color: gray;
+}
+
+.share_apps {
+	position: absolute;
+	right: 0px;
+	height: 4vw;
+}
+
+#facebook_app {
+	position: absolute;
+	top: 0.5vw;
+	right: 8.5vw;
+	width: 3vw;
+	height: 3vw;
+	background-image: url("./Images/Icons/facebook.png");
+	background-size: cover;
+}
+
+#instagram_app {
+	position: absolute;
+	top: 0.5vw;
+	right: 4.5vw;
+	width: 3vw;
+	height: 3vw;
+	background-image: url("./Images/Icons/instagram.png");
+	background-size: cover;
+}
+
+#twitter_app {
+	position: absolute;
+	top: 0.5vw;
+	right: 0.5vw;
+	width: 3vw;
+	height: 3vw;
+	background-image: url("./Images/Icons/twitter.png");
+	background-size: cover;
+}
+
+.producer {
+	position: absolute;
+	top: 51vw;
+	left: 5vw;
+	width: 90vw;
+	height: 25vw;
+}
+
+#basic_info #name {
+	position: absolute;
+	top: 1vw;
+	left: 1vw;
+	font-size: 1.5vw;
+}
+
+#basic_info #address {
+	position: absolute;
+	top: 4.5vw;
+	left: 1vw;
+	font-size: 1.2vw;
+}
+
+#categories {
+	position: absolute;
+	left: 0px;
+	top: 7vw;
+}
+
+#categories span {
+	position: absolute;
+	left: 2vw;
+	height: 4vw;
+	font-size: 1.3vw;
+}
+
+#categories #item1 {
+	position: absolute;
+	top: 2vw;
+}
+
+#categories #item2 {
+	position: absolute;
+	top: 6vw;
+}
+
+#categories #item3 {
+	position: absolute;
+	top: 10vw;
+}
+
+#categories #item4 {
+	position: absolute;
+	top: 14vw;
+}
+
+#categories span::before {
+	color: #00994d;
+	content: "\2022";
+	margin-right: 1vw;
+}
+
+#description {
+	position: absolute;
+	height: 23vw;
+	width: 40vw;
+	left: 25vw;
+	top: 1vw;
+	border-left: 0.1vw solid #00994d;
+	border-right: 0.1vw solid #00994d;
+}
+
+#pic {
+	position: absolute;
+	right: 5vw;
+	top: 1vw;
+	height: 12vw;
+	width: 12vw;
+	background-size: cover;
+	border-radius: 50%;
+}
+
+#meta {
+	position: absolute;
+	right: 5vw;
+	height: 10vw;
+	width: 12vw;
+	bottom: 0px;
+}
+
+#rating {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 3vw;
+	width: 100%;
+}
+
+#rating span {
+	font-size: 1.2vw;
+}
+
+#popularity {
+	position: absolute;
+	top: 3.5vw;
+	left: 0px;
+	height: 3vw;
+	width: 100%;
+}
+
+#popularity span {
+	font-size: 1.2vw;
+}
+
+#credibility {
+	position: absolute;
+	top: 7vw;
+	left: 0px;
+	height: 3vw;
+	width: 100%;
+	text-align: middle;
+}
+
+#credibility span {
+	font-size: 1.2vw;
+}
+
+.meta_icon {
+	position: absolute;
+	right: 0px;
+	height: 1.5vw;
+	width: 1.5vw;
+}
+
+#rating_icon {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-image: url("./Images/Icons/gold.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#popularity_icon {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-image: url("./Images/Icons/bronze.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#credibility_icon {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-image: url("./Images/Icons/silver.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.updates {
+	position: absolute;
+	left: 5vw;
+	top: 80vw;
+	width: 90vw;
+	height: 50vw;
+	border-top: 1px solid lightgrey;
+}
+
+#update1 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 15vw;
+	width: 50vw;
+}
+
+#update2 {
+	position: absolute;
+	top: 15vw;
+	left: 0px;
+	height: 15vw;
+	width: 50vw;
+}
+
+#update3 {
+	position: absolute;
+	top: 30vw;
+	left: 0px;
+	height: 15vw;
+	width: 50vw;
+}
+
+#update_header {
+	position: absolute;
+	top: 1vw;
+	left: 1vw;
+	font-size: 2vw;
+	color: #004d26;
+}
+
+#update_date {
+	position: absolute;
+	top: 5vw;
+	left: 1vw;
+	font-size: 1.6;
+}
+
+#update_description {
+	position: relative;
+	top: 8vw;
+	left: 1vw;
+	font-size: 1.1vw;
+}
+
+.footer {
+	position: absolute;
+	top: 170vw;
+	left: 0px;
+	height: 8vw;
+	width: 100vw;
+	background-color: #00994d;
+	border-top: 0.7px solid #004d26;
+}
+
+#about_us {
+	position: absolute;
+	top: 1.5vw;
+	left: 2vw;
+	font-size: 1.1vw;
+	color: white;
+}
+
+#how_we_work {
+	position: absolute;
+	top: 3.5vw;
+	left: 2vw;
+	font-size: 1.1vw;
+	color: white;
+}
+
+#contact {
+	position: absolute;
+	top: 5.5vw;
+	left: 2vw;
+	font-size: 1.1vw;
+	color: white;
+}
+
+.social {
+	top: 2.5vw;
+	position: absolute;
+	right: 2vw;
+	height: 3vw;
+	width: 13vw
+}
+
+#facebook {
+	position: absolute;
+	height: 3vw;
+	width: 3vw;
+	background-image: url("./Images/Icons/facebook.png");
+	background-size: cover;
+	right: 10vw;
+}
+
+#instagram {
+	position: absolute;
+	height: 3vw;
+	width: 3vw;
+	background-image: url("./Images/Icons/instagram.png");
+	background-size: cover;
+	right: 5vw;
+}
+
+#twitter {
+	position: absolute;
+	height: 3vw;
+	width: 3vw;
+	background-image: url("./Images/Icons/twitter.png");
+	background-size: cover;
+	right: 0px;
+}
+
